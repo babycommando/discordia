@@ -39,7 +39,7 @@
 (_________)      ⠀⠈⠉⠒⠀⠀⡀⢀⣠⠶⠖⠒⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠭⢭⢥⣄⠀⠀⠀⠀⠊⠁⠀⠀⠀⠀
 ```
 
-Welcome to DISCORDIA, user!
+**Welcome to DISCORDIA, user!**
 
 DISCORDIA is a discord bot that can read and write text messages,
 store them on a contextual memory, and may use multimodal vision
@@ -48,7 +48,7 @@ can do a function calling to search the internet to fact-check
 things. It have the potential to also do other kinds of function
 calling. Explore the example of the web search and be creative about it.
 
-Warning: Before proceeding, note that this is a discord SELFBOT,
+**Warning:** Before proceeding, note that this is a discord SELFBOT,
 a method that fetches directly the discord APIs without using the
 discord official libs. This is against the discord TOS, and could
 get you banned. Make sure to use this on a spare discord account,
@@ -56,15 +56,18 @@ and keep an eye on the time sleeps you use to call these apis.
 
 For this bot to work you will need to change its configurations:
 
-- Get your discord access token in the site by:
+- **Get your discord access token in the site by:**
+
   1. On inspect element, go to the network tab;
   2. Click on the "messages" request;
   3. Grab the authorization token;
-- Define your keys for the services in use:
+
+- **Define your keys for the services in use:**
+
   1. Groq for ultra fast LLM text generation (Llama3 70B); (See https://groq.com)
   2. Google Gemini for multimodal image processing; (See https://ai.google.dev/gemini-api)
   3. Jina for powering the LLM with a search engine (See https://jina.ai)
-- Define the personality of your bot by changing the "(...)"
-  parts (or everything else) to your own bot specs for your system prompts;
+
+- **Define the personality of your bot** by changing the "(...)" parts (or everything else) to your own bot specs for your system prompts;
 
 Have fun ::)
