@@ -1,3 +1,9 @@
+# DISCORDIA
+
+### A Discord user-like Ai that can talk on channels, see images, store context on memory and browse the internet to do fact checks.
+
+**Note**: **All the services used in this project are free. All the keys you need have massive free resources.**
+
 ```
  _________   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 (  _____  )  ⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⡀⢉⣉⠉⠉⠋⠐⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠰⠒⠒⠂⠀⠄⠀⠀⠀⠀⠀⠀⠀
@@ -55,9 +61,9 @@ For this bot to work you will need to change its configurations:
   2. Click on the "messages" request;
   3. Grab the authorization token;
 - Define your keys for the services in use:
-  1. Groq for ultra fast LLM text generation (Llama3 70B);
-  2. Google Gemini for multimodal image processing;
-  3. Jina for powering the LLM with a search engine
+  1. Groq for ultra fast LLM text generation (Llama3 70B); (See https://groq.com)
+  2. Google Gemini for multimodal image processing; (See https://ai.google.dev/gemini-api)
+  3. Jina for powering the LLM with a search engine (See https://jina.ai)
 - Define the personality of your bot by changing the "(...)"
   parts (or everything else) to your own bot specs for your system prompts;
 
