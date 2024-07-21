@@ -42,11 +42,11 @@
 **Welcome to DISCORDIA, user!**
 
 DISCORDIA is a discord bot that can read and write text messages,
-store them on a contextual memory, and may use multimodal vision
-models to answer with messages that holds image attachments and
-can do a function calling to search the internet to fact-check
-things. It have the potential to also do other kinds of function
-calling. Explore the example of the web search and be creative about it.
+store them on a contextual memory, use multimodal vision models to
+answer with messages that holds image attachments and do function
+calling to search the internet to fact-check things. It have the
+potential to also do other kinds of function calling - explore the
+example of the web search and be creative about it.
 
 **Warning:** Before proceeding, note that this is a discord SELFBOT,
 a method that fetches directly the discord APIs without using the
