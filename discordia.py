@@ -96,6 +96,22 @@ USERNAME = ""  # Adjust this to your bot's discord username
 DISCORD_USER_ID = "" # Adjust this to your bot's discord ID
 PROCESSED_MESSAGES_FILE = "processed_messages.txt" #create file to store processed messages
 CONTEXT_LENGTH = 6  # Number of messages to keep in context
+GROQ_MODEL="llama-3.1-405b-reasoning" 
+#Llama 3.0 models:
+# - llama3-70b-8192 
+# - llama3-8b-8192
+#Llama 3.1 models:
+# - llama-3.1-405b-reasoning
+# - llama-3.1-70b-versatile 
+# - llama-3.1-8b-instant 
+#Llama-Groq Tool Calling models:
+# - llama3-groq-8b-8192-tool-use-preview 
+# - llama3-groq-70b-8192-tool-use-preview
+#Mixtral 8x7B
+# - mixtral-8x7b-32768
+#Gemma
+# - gemma-7b-it
+# - gemma2-9b-it
 
 # Modify the personality
 PERSONALITY = """
@@ -223,7 +239,7 @@ def get_groq_response(prompt, context):
                 "content": "[conversation context]:" + context + ". [Latest message]: " + prompt,
             }
         ],
-        model="llama3-70b-8192",
+        model=GROQ_MODEL,
     )
     response = chat_completion.choices[0].message.content
     print(f"GROQ Response: {response}")
@@ -257,7 +273,7 @@ def get_groq_response(prompt, context):
                         "content": "[conversation context]:" + context + ". [Latest message]: " + prompt,
                     }
                 ],
-                model="llama3-70b-8192",
+                model=GROQ_MODEL,
             )
             response = chat_completion.choices[0].message.content
             print(f"GROQ Response With Search: {response}")
