@@ -96,14 +96,18 @@ USERNAME = ""  # Adjust this to your bot's discord username
 DISCORD_USER_ID = "" # Adjust this to your bot's discord ID
 PROCESSED_MESSAGES_FILE = "processed_messages.txt" #create file to store processed messages
 CONTEXT_LENGTH = 6  # Number of messages to keep in context
-GROQ_MODEL="llama-3.1-405b-reasoning" 
-#Llama 3.0 models:
-# - llama3-70b-8192 
-# - llama3-8b-8192
+GROQ_MODEL="llama-3.1-70b-versatile" 
+#Llama 3.2 models:
+# - llama-3.2-1b-preview
+# - llama-3.2-3b-preview
+# - llama-3.2-11b-vision-preview
+# - llama-3.2-90b-vision-preview
 #Llama 3.1 models:
 # - llama-3.1-405b-reasoning
 # - llama-3.1-70b-versatile 
 # - llama-3.1-8b-instant 
+#Llava: 
+# - llava-v1.5-7b-4096-preview
 #Llama-Groq Tool Calling models:
 # - llama3-groq-8b-8192-tool-use-preview 
 # - llama3-groq-70b-8192-tool-use-preview
@@ -224,9 +228,6 @@ def send_wait_response():
         print(f"Error Code: {r.status_code}")
         print(r.text)
 
-    # save_processed_message(message_id)
-    # update_recent_messages(author_username, content, timestamp)
-
 def get_groq_response(prompt, context):
     chat_completion = client.chat.completions.create(
         messages=[
@@ -337,7 +338,7 @@ def is_bot_mentioned(mentions, bot_id):
     return any(mention['id'] == bot_id for mention in mentions)
 
 def should_ignore_message(content):
-    return "tenor" in content or "discordapp.com" in content or "https" in content or "we hope you brought pizza." in content
+    return "tenor" in content or "discordapp.com" in content or "https" in content or "we hope you brought pizza." or "your rad meter" in content
 
 def update_recent_messages(author, content, timestamp):
     global recent_messages
@@ -374,7 +375,7 @@ while True:
                 save_processed_message(message_id)
                 continue
 
-            if "@baby" in content or is_bot_mentioned(mentions, bot_id):
+            if is_bot_mentioned(mentions, bot_id):
                 if attachments:
                     # Process the attachment
                     attachment_url = attachments[0]['url']
